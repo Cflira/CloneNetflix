@@ -1,0 +1,109 @@
+:root{
+    --vermelho: #e50914;
+    --preta: #141414;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Mantem todos os elementos dentro do box*/
+}
+
+/* Elementos base*/
+body{
+    background: var(--preta);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+
+}
+header .container{
+    display: flex /*Alinha os elementos em linha*/;
+    flex-direction: row; /*Este elemento não é necessário, ele é padrão*/
+    align-items: center; /*Note que o menu ficou lateral ao logo e centralizado*/
+    justify-content: space-between; /*Desgrudou do logo e setou espeço entre os menus*/
+
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+
+/*Filme princial*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa-house.jpg'); /*Os dois rgba(rgba(),100%) - joga uma camada fina em cima da imagem para ficar mais escura*/
+    height: 400px;
+    background-size: cover; /*Poe a nossa imagem na área de cobertura*/
+
+    display: flex;
+    flex-direction: column; /*Note que os dois botões foram alinhados como colunas*/
+    justify-content: center;
+    align-items: flex-start; /*Faz os elementos começarem pela esquerda*/
+    
+}
+
+.filme-principal .descricao{
+    margin-bottom: 40px; 
+    margin-top: 10px;  
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif ;
+}
+
+/*Definindo melhor os botões*/
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    
+    padding: 15px 30px; /*Muda a margem dos 4 lados dos botões*/
+    margin-right: 15px; /* Mudando a distancia entre os botões*/
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+/*Coloca ícones nos botões do site Font Awesome*/
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
